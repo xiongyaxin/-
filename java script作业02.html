@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="one" value="">
+    <input type="button" id="two" value="查询">
+    <script>
+    var a=document.getElementById("one");
+    var b=document.getElementById("two");
+    b.onclick=function(){
+        var nian=parseInt(a.value);
+        if(nian != ""){
+                  if(nian<1){
+                        alert("请输入公元后年份")
+                  }
+        }else{
+        if((nian % 400 == 0)||(nian % 4 == 0 && nian % 100 != 0)||(nian%3200==0&&nian%172800==0)){
+                 alert("闰年");
+         }else{
+               alert("不是");
+         } 
+    }} 
+
+    //         if(nian%4 ==0){
+    //         if(nian%100 != 0){
+    //             alert('闰年');
+    //         }
+    //     }else if(nian%400==0){
+    //           alert("闰年")
+    //     }else{
+    //         alert("bushu");
+            
+    //     }
+    // }
+    
+
+    </script>
+</body>
+</html>
